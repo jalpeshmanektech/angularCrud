@@ -1,9 +1,6 @@
 <h1>Counter App</h1>
-<div class="counterDiv">
-    <h1 class="counterlbl">{{count}}</h1>
-    <div class="actionBtn">
-        <button (click)="handlerCount('reset')">Reset</button>
-        <button (click)="handlerCount('minus')" >-</button>
-        <button (click)="handlerCount('plus')">+</button>
-    </div>
-</div>
+<h1>Name => {{displayValue}}</h1>
+<input value="{{name}}" (change)="SetChangedValue($event)" #namefield>
+<button (click)="SetValue(namefield.value)">Set Value</button>
+<button (click)="GetValue()">Get Value</button>
+<button (click)="GetValue()">Get Value by change event</button>

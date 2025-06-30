@@ -11,17 +11,15 @@ import { Profile } from './profile/profile';
   styleUrl: './app.css'
 })
 export class App {
-  count=0
-  handlerCount(val:string){
-    if(val=="plus"){
-      this.count++;
-    }else if(val == "minus"){
-      if(this.count > 0)
-      {
-        this.count--;
-      }
-    }else{
-      this.count = 0;
-    }
-  }
+name=""  
+displayValue=""
+SetValue(val:string){
+  this.name=val;
+}
+SetChangedValue(val:Event){
+  this.name=(val.target as HTMLInputElement).value;
+}
+GetValue(){
+  this.displayValue = this.name;
+}
 }
