@@ -15,4 +15,13 @@ export class App {
   name = "Jalpesh";
   x = 10;
   y =20;
+
+   ButtonClicked(){
+        console.log("button clicked bro :)")
+        this.InnerFunction()
+    }
+
+    InnerFunction(){
+      console.log("2nd function")
+    }
 }
