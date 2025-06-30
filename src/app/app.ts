@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
@@ -12,16 +12,16 @@ import { Profile } from './profile/profile';
 })
 export class App {
   protected title = 'angularCrud';
-  name = "Jalpesh";
-  x = 10;
-  y =20;
+  name:any = "Jalpesh";
+  x:number = 10;
+  y:number =20;
 
    ButtonClicked(){
         console.log("button clicked bro :)")
-        this.InnerFunction()
+        this.sum(this.x,this.y)
     }
 
-    InnerFunction(){
-      console.log("2nd function")
+    sum(a:number, b:number){
+      console.log(a + b);
     }
 }
