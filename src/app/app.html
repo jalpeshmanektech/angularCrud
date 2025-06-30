@@ -1,5 +1,9 @@
-<h1>Jalpesh Hello</h1>
-<button (click)='ButtonClicked()'>Sum</button>
-<app-login></app-login>
-<app-signup></app-signup>
-<app-profile></app-profile>
+<h1>Counter App</h1>
+<div class="counterDiv">
+    <h1 class="counterlbl">{{count}}</h1>
+    <div class="actionBtn">
+        <button (click)="handlerCount('reset')">Reset</button>
+        <button (click)="handlerCount('minus')" >-</button>
+        <button (click)="handlerCount('plus')">+</button>
+    </div>
+</div>

@@ -11,17 +11,17 @@ import { Profile } from './profile/profile';
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'angularCrud';
-  name:any = "Jalpesh";
-  x:number = 10;
-  y:number =20;
-
-   ButtonClicked(){
-        console.log("button clicked bro :)")
-        this.sum(this.x,this.y)
+  count=0
+  handlerCount(val:string){
+    if(val=="plus"){
+      this.count++;
+    }else if(val == "minus"){
+      if(this.count > 0)
+      {
+        this.count--;
+      }
+    }else{
+      this.count = 0;
     }
-
-    sum(a:number, b:number){
-      console.log(a + b);
-    }
+  }
 }
