@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
@@ -11,26 +11,11 @@ import { Profile } from './profile/profile';
   styleUrl: './app.css'
 })
 export class App {
+  x=signal(10);
+  y=signal(10);
+  answer = computed(()=>this.x()+this.y())
 
-  constructor(){
-    effect(()=>{
-      console.log(this.count());
-    })
-  }
-
-  count:any=signal(10);
-  selectedStudent="";
-  students = [
-    {name:"Jalpesh", age:20, Surname:"Nakum"},
-    {name:"John", age:22, Surname:"Peter"},
-    {name:"Shan", age:23, Surname:"Alex"}
-  ]
-
-  GetStudentData(val:string){
-    this.selectedStudent= val;
-  }
-
-  UpdateCount(val:string){
-    this.count.set(this.count()+1)
+  UpdateValue(){
+    this.x.set(100);
   }
 }

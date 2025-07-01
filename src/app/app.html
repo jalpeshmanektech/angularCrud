@@ -1,13 +1,4 @@
-<h1>Foor Loop</h1>
+<h1>Signal </h1>
 
-<h3>Selected student is = {{selectedStudent}}</h3>
-@for (item of students; track $index) {
-    <h2>{{$index+1}} : {{item.name}} - {{item.Surname}} - {{item.age}}</h2>
-    <button (click)="GetStudentData(item.name)">Get Value</button>
-}
-
-<hr>
-
-<h1>{{count()}}</h1>
-<button (click)="count.set(count()+1)">Increment</button>
-<button (click)="count.set(count()-1)">Decrement</button>
+<h2>{{answer()}}</h2>
+<button (click)="UpdateValue()">Calculate</button>
