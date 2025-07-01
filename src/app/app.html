@@ -13,7 +13,22 @@
 
 <hr >
 
-@if(color==1){
+@switch (color) {
+    @case (1) {
+        <div style="background-color: red; width: 100px; height: 100px;"></div>
+    }
+    @case (2) {
+        <div style="background-color: orange; width: 100px; height: 100px;"></div>
+    }
+    @case (3) {
+        <div style="background-color: green; width: 100px; height: 100px;"></div>
+    }
+    @default {
+        <div style="background-color: black; width: 100px; height: 100px;"></div>
+    }
+}
+
+<!-- @if(color==1){
     <div style="background-color: red; width: 100px; height: 100px;"></div>
 }
 @else if(color == 2){
@@ -24,4 +39,4 @@
 }
 @else{
     <div style="background-color: black; width: 100px; height: 100px;"></div>
-}
+} -->
