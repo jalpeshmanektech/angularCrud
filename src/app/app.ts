@@ -11,16 +11,22 @@ import { Profile } from './profile/profile';
   styleUrl: './app.css'
 })
 export class App {
-  x=signal(10);
-  y=signal(10);
-  answer = computed(()=>this.x()+this.y())
+count= signal(0);
+displayheading = false;
 
+constructor(){
+  effect(()=>{
+    if(this.count() == 2){
+      this.displayheading = true,
+      setTimeout(()=> this.displayheading= false, 2000)
+    }else{
+      this.displayheading = false
+    }
+  })
+}
 
-  UpdateXValue(val:Event){
-    this.x.set(parseInt((val.target as HTMLInputElement).value));
-  }
+updateCount(){
+  this.count.set(this.count()+1)
+}
 
-   UpdateYValue(val:Event){
-     this.y.set(parseInt((val.target as HTMLInputElement).value));
-  }
 }

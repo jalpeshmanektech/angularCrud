@@ -1,5 +1,8 @@
-<h1>Signal </h1>
+<h1>Effect in angular</h1>
 
-<h2>{{answer()}}</h2>
-<input value="{{x()}}" (input)="UpdateXValue($event)" placeholder="Update X value">
-<input value="{{y()}}" (input)="UpdateYValue($event)" placeholder="Update Y value">
+<h3>{{count()}}</h3>
+<button (click)="updateCount()">Increment count</button>
+@if(displayheading)
+{
+    <h1>Hello I am here :)</h1>
+}
