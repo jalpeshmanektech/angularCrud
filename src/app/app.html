@@ -1,5 +1,7 @@
 <h1>Foor Loop</h1>
 
+<h3>Selected student is = {{selectedStudent}}</h3>
 @for (item of students; track $index) {
     <h2>{{$index+1}} : {{item.name}} - {{item.Surname}} - {{item.age}}</h2>
+    <button (click)="GetStudentData(item.name)">Get Value</button>
 }

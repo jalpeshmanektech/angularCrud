@@ -11,9 +11,14 @@ import { Profile } from './profile/profile';
   styleUrl: './app.css'
 })
 export class App {
+  selectedStudent="";
   students = [
     {name:"Jalpesh", age:20, Surname:"Nakum"},
     {name:"John", age:22, Surname:"Peter"},
     {name:"Shan", age:23, Surname:"Alex"}
   ]
+
+  GetStudentData(val:string){
+    this.selectedStudent= val;
+  }
 }
