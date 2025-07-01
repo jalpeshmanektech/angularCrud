@@ -15,7 +15,12 @@ export class App {
   y=signal(10);
   answer = computed(()=>this.x()+this.y())
 
-  UpdateValue(){
-    this.x.set(100);
+
+  UpdateXValue(val:Event){
+    this.x.set(parseInt((val.target as HTMLInputElement).value));
+  }
+
+   UpdateYValue(val:Event){
+     this.y.set(parseInt((val.target as HTMLInputElement).value));
   }
 }

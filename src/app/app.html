@@ -1,4 +1,5 @@
 <h1>Signal </h1>
 
 <h2>{{answer()}}</h2>
-<button (click)="UpdateValue()">Calculate</button>
+<input value="{{x()}}" (input)="UpdateXValue($event)" placeholder="Update X value">
+<input value="{{y()}}" (input)="UpdateYValue($event)" placeholder="Update Y value">
