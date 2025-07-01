@@ -3,30 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from "./login/login";
 import { Signup } from "./signup/signup";
 import { Profile } from './profile/profile';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Login, Signup, Profile],
+  imports: [RouterOutlet, Login, Signup, Profile, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-count= signal(0);
-displayheading = false;
-
-constructor(){
-  effect(()=>{
-    if(this.count() == 2){
-      this.displayheading = true,
-      setTimeout(()=> this.displayheading= false, 2000)
-    }else{
-      this.displayheading = false
-    }
-  })
-}
-
-updateCount(){
-  this.count.set(this.count()+1)
-}
-
+  name="dsd"
 }

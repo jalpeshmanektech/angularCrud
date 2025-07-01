@@ -1,8 +1,5 @@
-<h1>Effect in angular</h1>
+<h1>Two way binding in angular</h1>
 
-<h3>{{count()}}</h3>
-<button (click)="updateCount()">Increment count</button>
-@if(displayheading)
-{
-    <h1>Hello I am here :)</h1>
-}
+<input [(ngModel)]="name" placeholder="enter name">
+<h3>{{name}}</h3>
+
