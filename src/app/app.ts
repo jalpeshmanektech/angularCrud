@@ -11,15 +11,18 @@ import { Profile } from './profile/profile';
   styleUrl: './app.css'
 })
 export class App {
-name=""  
-displayValue=""
-SetValue(val:string){
-  this.name=val;
-}
-SetChangedValue(val:Event){
-  this.name=(val.target as HTMLInputElement).value;
-}
-GetValue(){
-  this.displayValue = this.name;
-}
+  color:Number = 1;
+  displayInput:boolean = false;
+
+  setColor(color:Number){
+    this.color=color;
+  }
+
+  setInputColor(val:Event){
+    this.color = parseInt((val.target as HTMLInputElement).value)
+  }
+
+  toggleBox(){
+    this.displayInput=!this.displayInput;
+  }
 }
