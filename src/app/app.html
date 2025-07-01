@@ -5,3 +5,9 @@
     <h2>{{$index+1}} : {{item.name}} - {{item.Surname}} - {{item.age}}</h2>
     <button (click)="GetStudentData(item.name)">Get Value</button>
 }
+
+<hr>
+
+<h1>{{count()}}</h1>
+<button (click)="count.set(count()+1)">Increment</button>
+<button (click)="count.set(count()-1)">Decrement</button>
