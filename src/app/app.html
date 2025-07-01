@@ -1,42 +1,5 @@
-<h1>If else</h1>
+<h1>Foor Loop</h1>
 
-<button (click)="setColor(1)">Red</button>
-<button (click)="setColor(2)">Orange</button>
-<button (click)="setColor(3)">Green</button>
-<button (click)="setColor(4)">Other</button>
-<br />
-<br />
-<button (click)="toggleBox()">{{displayInput ? "Hide Input box" : "Display Input box"}}</button>
-@if(displayInput){
-    <input (input)="setInputColor($event)">
+@for (item of students; track $index) {
+    <h2>{{$index+1}} : {{item.name}} - {{item.Surname}} - {{item.age}}</h2>
 }
-
-<hr >
-
-@switch (color) {
-    @case (1) {
-        <div style="background-color: red; width: 100px; height: 100px;"></div>
-    }
-    @case (2) {
-        <div style="background-color: orange; width: 100px; height: 100px;"></div>
-    }
-    @case (3) {
-        <div style="background-color: green; width: 100px; height: 100px;"></div>
-    }
-    @default {
-        <div style="background-color: black; width: 100px; height: 100px;"></div>
-    }
-}
-
-<!-- @if(color==1){
-    <div style="background-color: red; width: 100px; height: 100px;"></div>
-}
-@else if(color == 2){
-    <div style="background-color: orange; width: 100px; height: 100px;"></div>
-}
-@else if(color == 3){
-    <div style="background-color: green; width: 100px; height: 100px;"></div>
-}
-@else{
-    <div style="background-color: black; width: 100px; height: 100px;"></div>
-} -->

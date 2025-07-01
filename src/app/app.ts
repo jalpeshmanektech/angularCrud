@@ -11,18 +11,9 @@ import { Profile } from './profile/profile';
   styleUrl: './app.css'
 })
 export class App {
-  color:Number = 1;
-  displayInput:boolean = false;
-
-  setColor(color:Number){
-    this.color=color;
-  }
-
-  setInputColor(val:Event){
-    this.color = parseInt((val.target as HTMLInputElement).value)
-  }
-
-  toggleBox(){
-    this.displayInput=!this.displayInput;
-  }
+  students = [
+    {name:"Jalpesh", age:20, Surname:"Nakum"},
+    {name:"John", age:22, Surname:"Peter"},
+    {name:"Shan", age:23, Surname:"Alex"}
+  ]
 }
