@@ -22,3 +22,19 @@ display: contents;
 .actionBtn button:hover{
     border: 1px dashed darkblue;
 }
+
+  table {
+        margin-top: 50px;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 12px 16px;
+        border: 2px solid #333;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }

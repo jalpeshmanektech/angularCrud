@@ -1,5 +1,26 @@
-<h1>Two way binding in angular</h1>
+<h1>To Do List</h1>
 
-<input [(ngModel)]="name" placeholder="enter name">
-<h3>{{name}}</h3>
+<input type="text" [(ngModel)]="task" placeholder="Enter new task">
+<button (click)="AddTask()">Add new task</button>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Task</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of taskList; track item.id) {
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.task }}</td>
+                <td>
+                    <button (click)="DeleteTask(item.id)">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 
+    
